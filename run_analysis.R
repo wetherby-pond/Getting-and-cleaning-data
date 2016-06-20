@@ -11,18 +11,7 @@ MergeDataRow <- function( file1, file2, target )
   target <- rbind(dat1, dat2)
 }
 
-MergeDataCol <- function( file1, file2, target )
-{
-  dat1 <- read.csv(file1)
-  dat2 <- read.csv(file2)
-  
-  ##match column names so they bind
-  ## This assumes we are adding equivalent tables
-  ##names(dat1) <- names(dat2)
-  
-  ## return data frame
-  target <- merge(dat1, dat2)
-}
+
 
 AmalgamateDataSets <- function(fulldataset)
 {
